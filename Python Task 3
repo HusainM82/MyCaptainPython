@@ -1,0 +1,16 @@
+def most_frequent(text):
+    freq = {}
+
+    for char in text:
+        if char in freq:
+            freq[char] += 1
+
+        else:
+            freq[char] = 1
+
+    sorted_freq = sorted(freq.items(), key=lambda x: x[1], reverse=True)
+
+    for char, count in sorted_freq:
+        print(f"{char}: {count}")
+        
+most_frequent("Hello Husain")        
