@@ -1,0 +1,8 @@
+filename = input("Input the Filename: ")
+
+index = filename.rfind('.')
+if index != -1:
+    extension = filename[index+1:]
+    print(f"The extension of {filename} is {extension}")
+else:
+    print(f"{filename} doesn't have an extension")
